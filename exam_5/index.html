@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/style.css">
+	<title>Chat</title>
+</head>
+
+<body>
+	<div class="container">
+		<div id="listForm">
+			<label id="userName"></label>
+			<button id="profile">Редактировать Профиль</button>
+			<button id="subscribe">Подписаться</button>
+		</div>
+
+		<form id="messageForm">
+			<input type="text" id="message" placeholder="Сообщение">
+			<button type="submit" id="send">Отправить</button>
+		</form>
+	</div>
+
+	<div id="messages"></div>
+	<main id="post-list">
+		<div>
+			<p class="post-author"></p>
+			<p id="post-message"></p>
+		</div>
+
+	</main>
+
+
+	<script src="js/index.js"></script>
+</body>
+
+</html>

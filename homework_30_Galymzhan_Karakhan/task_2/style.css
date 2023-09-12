@@ -1,0 +1,20 @@
+table{
+	border-collapse: collapse;
+	background-color: rgba(90, 183, 206, 0.1);
+}
+
+
+th{
+	border: 1px solid #000;
+	margin: 0;
+	text-align: center;
+	padding: 10px 20px;
+}
+td {
+	padding: 10px 20px;
+	border: 1px solid #000;
+	text-align: center;
+	border-style: solid;
+	margin: 0;
+
+}

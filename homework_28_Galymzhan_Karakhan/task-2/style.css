@@ -1,0 +1,40 @@
+.tabs {
+	display: flex;
+	list-style: none;
+	}
+	
+	.item {
+	cursor: pointer;
+	padding: 10px;
+	background-color: #EEE;
+	border: 1px solid #DDD;
+	border-bottom: none;
+	border-radius: 5px 5px 0 0;
+	}
+	
+	.item.active {
+	background-color: #FFF;
+	border-color: #CCC;
+	}
+	
+	.item:not(:last-child) {
+	margin-right: 5px;
+	}
+	
+
+	.content {
+	border: 1px solid #DDD;
+	border-radius: 0 0 5px 5px;
+	padding: 10px;
+	}
+	
+	.content-item {
+	display: none;
+	}
+	
+	.content-item.active {
+	display: block;
+	}
+	
+	
+	

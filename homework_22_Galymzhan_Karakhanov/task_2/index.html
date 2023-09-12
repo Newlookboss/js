@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		const Calculator = {
+			a: 0,
+			b: 0,
+
+			read() {
+				this.a = parseInt(prompt("Введите первую цифру: "));
+				this.b = parseInt(prompt("Введите последнюю цифру: "));
+			},
+			sum() {
+				return this.a + this.b;
+
+			},
+			multiply() {
+				return this.a * this.b;
+			},
+		};
+
+		Calculator.read();
+
+		console.log(Calculator.sum());
+		console.log(Calculator.multiply());
+
+
+	</script>
+
+</body>
+
+</html>

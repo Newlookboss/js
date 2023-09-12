@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+
+		const gum = {
+			place: "Спорт зал",
+			day: "3 раза в неделю",
+			hour: "19:00",
+			getSummary: function () {
+				return `Я хожу в ${this.place}  ${this.day} c ${this.hour} по 22:00.`;
+			}
+		};
+
+		const pet = {
+			name: "Ашура",
+			species: "кошку",
+			color: "белую",
+			getSpecification: function () {
+				return `Хочу купить ${this.species} , ${this.color} цвета и назвать его ${this.name}.`;
+			}
+		};
+
+		const phone = {
+			brand: "Apple",
+			model: "iPhone 12 Pro Max",
+			storage: 256,
+			getSpecification: function () {
+				return `Мой ${this.brand} ${this.model} имеет  ${this.storage} GB памяти.`;
+			}
+		};
+
+
+		console.log(gum.getSummary());
+		console.log(pet.getSpecification());
+		console.log(phone.getSpecification());
+
+	</script>
+
+</body>
+
+</html>

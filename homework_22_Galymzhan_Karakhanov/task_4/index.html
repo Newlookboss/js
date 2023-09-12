@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script >
+		const Host = {
+  guestList: [],
+  setGuestList: function(names) {
+    console.log(`Initially, the guest list had: ${names.length} names.`);
+    for (const name of names) {
+      if (Math.random() < 0.8) {
+        this.guestList.push(name);
+      }
+    }
+    console.log(`After Host decided, only ${this.guestList.length} names were left.`);
+    console.log(`Host decided on: ${this.guestList.join(', ')} to come to the party.`);
+  }
+};
+
+const initialList = ['John', 'Jack', 'Harry', 'Mario', 'Link', 'Zelda', 'Bowser'];
+
+Host.setGuestList(initialList);
+
+
+	</script>
+
+</body>
+
+</html>
