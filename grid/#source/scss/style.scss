@@ -1,0 +1,654 @@
+@import "reset.scss";
+@import "path_file.scss";
+@import "butter.scss";
+@import "_font.scss";
+// @include _xs,sm,md,lg,xl,xxl.
+// @extend %burger;
+body {
+	font-family: Proxima-Nova, sans-serif;
+	font-weight: 400;
+}
+.wrapper {
+	display: flex;
+	flex-flow: column;
+	min-height: 100%;
+	overflow: hidden;
+}
+.container_header {
+	max-width: 1343px;
+	margin: 0 auto;
+}
+.content {
+	flex: 1 1 auto;
+}
+.container {
+	max-width: 1203px;
+	margin: 0 auto;
+}
+
+// * menu+burger
+
+.header {
+	background-color: #ffffff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	padding: 29px 15px;
+
+	.hamburger-menu {
+		display: none;
+		@include xxl {
+			display: block;
+		}
+
+		.menu__box {
+			@include xxl {
+				width: 40%;
+				margin-left: 60%;
+			}
+			@include md {
+				width: 60%;
+				margin-left: 40%;
+			}
+			@include sm {
+				width: 100%;
+				margin-left: 0%;
+			}
+		}
+	}
+	@extend %burger;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+
+	&__logo {
+		margin-top: -8px;
+		align-self: center;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include xxl {
+			display: none;
+		}
+	}
+
+	&__nav {
+		white-space: nowrap;
+		position: relative;
+		padding-bottom: 8px;
+		margin-top: 8px;
+		a {
+			width: 100%;
+			margin-left: 56px;
+			background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-family: Roboto;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 18px;
+		}
+		&:hover {
+			@extend %line;
+		}
+	}
+	.home {
+		font-weight: 700;
+	}
+
+	&__icon {
+		margin: -8px 24px 0 55px;
+	}
+
+	&__bottom button {
+		margin-left: 10px;
+		height: 56px;
+		width: 160px;
+		background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+		box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+		border-radius: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		font-size: 14px;
+		font-family: Roboto;
+		font-weight: 900;
+		line-height: 16px;
+	}
+}
+
+.contact {
+	width: 170px;
+	text-align: left;
+	margin: 0px auto 10px;
+
+	h3 {
+		font-weight: 600;
+		font-size: 15px;
+		color: #ffffff;
+		margin: 20px 0 10px 0;
+	}
+	p {
+		line-height: 21px;
+		color: #ffffff;
+		font-size: 13px;
+	}
+}
+
+// * content
+
+.boss {
+	margin-top: 113px;
+	padding: 15px;
+	background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+	height: 498px;
+	@include xxl {
+		margin-top: 89px;
+	}
+}
+.portrite {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+
+	@include sm {
+		margin-top: -25px;
+	}
+	@include xs {
+		margin-top: 0px;
+	}
+
+	&__title {
+		margin-top: 90px;
+		font-family: Proxima-Nova;
+		font-size: 44px;
+		line-height: 70px;
+		text-align: left;
+		max-width: 520px;
+		color: #ffffff;
+		font-weight: 700;
+		z-index: 3;
+		@include md {
+			font-size: 40px;
+			line-height: 50px;
+		}
+		@include xs {
+			font-size: 30px;
+			line-height: 40px;
+		}
+	}
+
+	&__text {
+		color: #ffffff;
+		margin-top: 26px;
+		font-size: 18px;
+		line-height: 33px;
+		text-align: left;
+		max-width: 444px;
+		z-index: 3;
+		span {
+			font-family: Proxima-Nova;
+			font-weight: 700;
+		}
+	}
+	&__icon img {
+		position: absolute;
+		right: 0%;
+		top: 0;
+		z-index: 1;
+		@include lg {
+			display: none;
+		}
+	}
+}
+.form {
+	&__input {
+		input {
+			width: 100%;
+			background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+			padding: 10px 0 5px 0;
+			color: #fff;
+		}
+
+		input::-webkit-input-placeholder {
+			font-family: Proxima-Nova;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 16px;
+			color: #fff;
+			padding: 22px 30px;
+			background: url(/img/icon/lens.svg) 0px 15px no-repeat;
+		}
+	}
+	.line {
+		height: 2px;
+		background: #ffffff;
+		z-index: 2;
+	}
+}
+.background {
+	background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+	padding: 15px 30px 27px;
+	border-radius: 10px;
+	margin: 90px 0 72px;
+	@include xxl {
+		margin: 30px 15px 23px;
+	}
+}
+
+// * card+side
+
+.grid {
+	display: flex;
+	justify-content: space-between;
+	// .grid__content
+
+	&__content {
+	}
+
+	// .grid__row
+
+	&__row {
+		display: grid;
+		grid-template: 1fr / 1fr 2fr 1fr;
+		margin-bottom: 46px;
+
+		@include md {
+			grid-template: 1fr / 1fr 1fr 1fr;
+		}
+
+		@include xl {
+			grid-template: 1fr / 1fr 1fr 1fr;
+		}
+	}
+
+	// .grid__text
+
+	&__text {
+		font-family: Proxima-Nova;
+		font-size: 14px;
+		text-align: left;
+		margin-right: 5px;
+	}
+
+	&__numero {
+		font-family: Proxima-Nova;
+		font-size: 14px;
+		text-align: left;
+		margin-right: 5px;
+		a {
+			color: #2f2f2f;
+			margin: 0 5px;
+		}
+	}
+
+	&__img {
+		display: flex;
+		justify-content: end;
+		img {
+			margin-left: 15px;
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template: 279px / repeat(3, minmax(250px, 303px));
+		grid-gap: 15px 10px;
+		@include xl {
+			grid-template: 279px / repeat(2, minmax(250px, 303px));
+		}
+		@include lg {
+			grid-template: 279px / repeat(2, minmax(250px, 303px));
+		}
+		@include md {
+			grid-template: 279px / repeat(2, minmax(240px, 303px));
+		}
+		@include sm {
+			grid-template: 279px / minmax(250px, 303px);
+			padding: 0 25px;
+		}
+	}
+}
+
+// ! card
+
+.card {
+	margin-bottom: 106px;
+	@include md {
+		margin-bottom: 50px;
+	}
+	a {
+		color: #fff;
+	}
+	&__flex {
+		height: 279px;
+		max-width: 303px;
+		border-radius: 10px;
+		background: #c4c4c4;
+		position: relative;
+	}
+
+	&__side {
+		position: absolute;
+		height: 33px;
+		right: 0%;
+		top: 0%;
+		font-family: Proxima-Nova;
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: bold;
+		text-align: center;
+		padding: 7px 20px;
+		background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+		border-radius: 0 10px 0 10px;
+	}
+
+	&__button {
+		position: absolute;
+		height: 73px;
+		width: 100%;
+		right: 0%;
+		bottom: 0%;
+		font-family: Proxima-Nova;
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: 900;
+		text-align: left;
+		padding: 15px 30px;
+		background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+		border-radius: 0 0 10px 10px;
+	}
+	&__nowrap {
+		margin-top: 10px;
+	}
+}
+
+// ! nav
+
+.nav {
+	@include md {
+		margin-left: 10%;
+	}
+	@include xs {
+		margin-left: 0;
+	}
+	&__btn {
+		height: 60px;
+		width: 60px;
+		background: #fff;
+		border: 1px #e0e0e0 solid;
+		border-radius: 50%;
+		color: #000;
+		margin-right: 11px;
+		margin-bottom: 34px;
+		@include md {
+			height: 50px;
+			width: 50px;
+		}
+		@include xs {
+			height: 40px;
+			width: 40px;
+		}
+		&:hover {
+			color: #fff;
+			background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+		}
+		&:first-child {
+			color: #fff;
+			background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+		}
+	}
+
+	.btn_text {
+		font-family: Roboto;
+		width: 100px;
+		border-radius: 100px;
+		@include md {
+			width: 90px;
+		}
+		@include xs {
+			width: 80px;
+		}
+	}
+}
+
+// ! side
+
+.side {
+	display: flex;
+	margin: 0 15px;
+	@include md {
+		flex-wrap: wrap;
+	}
+
+	&__menu {
+		display: flex;
+		align-content: center;
+		flex-flow: column;
+		margin-left: 25px;
+		@include md {
+			flex-flow: row;
+			margin: 10px auto;
+		}
+	}
+	.side_colum {
+		@include lg {
+			margin: 0 25px;
+		}
+	}
+	// .side__title
+
+	&__title {
+		font-family: Proxima-Nova;
+		font-size: 18px;
+		line-height: 19px;
+		text-align: left;
+		color: #5c5c5c;
+		margin-bottom: 25px;
+		font-weight: 700;
+	}
+
+	// .side__text
+
+	&__text {
+		margin-bottom: 23px;
+		a {
+			font-family: Proxima-Nova;
+			font-size: 14px;
+			line-height: 15px;
+			text-align: left;
+			color: #5c5c5c;
+		}
+	}
+
+	// .side__btn
+
+	&__btn {
+		button {
+			height: 54px;
+			width: 160px;
+			background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+			color: #fffefc;
+			box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+			border-radius: 100px;
+			margin-right: 11px;
+			margin-bottom: 34px;
+			font-weight: 700;
+		}
+	}
+}
+
+.btn {
+	&__side {
+		height: 42px;
+		width: 42px;
+		background: #fff;
+		border: 1px #5c5c5c solid;
+		box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+		border-radius: 50%;
+		color: #5c5c5c;
+		margin-right: 11px;
+		margin-bottom: 34px;
+		&:hover {
+			background: linear-gradient(253.58deg, #ffc000 1.55%, #ff8a00 95.8%);
+			color: #fff;
+		}
+	}
+}
+
+// * FOOTER!
+
+.footer {
+	margin-top: 100px;
+	background: #212121;
+	@include md {
+		margin-top: 60px;
+	}
+
+	&__container {
+		max-width: 1257px;
+		margin: 0 auto;
+		padding: 15px;
+	}
+
+	&__todo {
+		display: flex;
+		margin: 46px 0 0;
+		justify-content: space-between;
+		min-height: 273px;
+		@include xl {
+			justify-content: space-around;
+		}
+	}
+
+	&__colum-logo {
+		width: 265px;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: left;
+
+		@media (max-width: 555px) {
+			text-align: center;
+			width: 100%;
+			font-size: 24px;
+			line-height: 27px;
+		}
+	}
+
+	&__logo-icon {
+		p {
+			color: #fff;
+			margin: 32px 0 50px;
+			@media (max-width: 555px) {
+				max-width: 365px;
+				margin: 32px auto 40px;
+			}
+		}
+	}
+
+	&__icon {
+		margin: 0 -5px;
+		img {
+			margin: 0 5px;
+			@media (max-width: 555px) {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 785px;
+		padding: 0 24px;
+
+		@include xl {
+			width: 350px;
+			justify-content: left;
+			margin-left: 20px;
+			padding: 0;
+		}
+		@media (max-width: 555px) {
+			display: none;
+		}
+	}
+
+	&__colum-text {
+		margin: 0 10px;
+		@include xl {
+			width: 150px;
+			margin: 0 10px;
+		}
+
+		a {
+			color: #fff;
+			margin-bottom: 17px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 32px;
+	}
+
+	&__list-uno {
+		display: flex;
+		flex-flow: column;
+		justify-content: end;
+		height: 167px;
+		width: 150px;
+		color: #fff;
+		line-height: 31px;
+
+		@include xl {
+			justify-content: center;
+		}
+	}
+	&__list {
+		display: flex;
+		flex-flow: column;
+		color: #fff;
+	}
+
+	&__end {
+		background-color: #000;
+		width: 100%;
+	}
+
+	&__end-flex {
+		display: flex;
+		justify-content: space-between;
+
+		color: #fff;
+		font-family: Proxima-Nova;
+		font-size: 12px;
+		line-height: 15px;
+		font-weight: 700;
+		text-align: left;
+	}
+
+	&__end-margin {
+		margin-left: 10px;
+	}
+
+	&__end-buttom {
+		white-space: nowrap;
+		margin-left: 30px;
+
+		@include md {
+			margin-left: 0px;
+		}
+		span {
+			color: #ffc000;
+		}
+	}
+}
